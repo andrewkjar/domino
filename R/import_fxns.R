@@ -297,9 +297,9 @@ create_domino = function(signaling_db, features, ser = NULL, counts = NULL,
                 method = 'spearman', alternative = 'greater')
             rhorow[rec] = cor$estimate
         }
-        if(length(module_rec_targets > 0)){
-            rhorow[module_rec_targets] = 0
-        }
+        #if(length(module_rec_targets > 0)){
+        #    rhorow[module_rec_targets] = 0
+        #}
         rho[,module] = rhorow
     }
     colnames(rho) = rownames(dom@features)
